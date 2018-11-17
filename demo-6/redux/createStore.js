@@ -18,17 +18,11 @@ export default function createStore(reducer, initState) {
     return state;
   }
 
-  function replaceReducer(nextReducer) {
-    reducer = nextReducer
-    dispatch({ type: Symbol() });
-  }
-
   dispatch({ type: Symbol() });
 
   return {
     subscribe,
     dispatch,
-    getState,
-    replaceReducer
+    getState
   }
 }
